@@ -1,0 +1,180 @@
+.loginRow {
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+    
+  height: 100vh;
+    .col {
+      .regtitle,
+      .logtitle {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px 8px;
+        margin-bottom: 30px;
+        color: rgb(78, 69, 69);
+        cursor: pointer;
+      }
+      .extregtitle {
+        border-bottom: 4px solid rgb(111, 145, 196);
+      }
+  
+      .extlogtitle {
+        border-bottom: 4px solid rgb(111, 145, 196);
+      }
+  
+      .register,
+      .login {
+        position: absolute;
+  
+        top: 0;
+        left: 0;
+        right: 0;
+  
+        backface-visibility: hidden;
+      }
+  
+      .register {
+        transform: rotateY(0deg);
+      }
+  
+      .login {
+        transform: rotateY(180deg);
+      }
+  
+      .flipper {
+        position: relative;
+  
+        transition: 0.6s;
+        transform-style: preserve-3d;
+      }
+  
+      .flip-container {
+        perspective: 1000;
+      }
+  
+      .signupError {
+        color: red;
+      }
+  
+      .signinError {
+        color: red;
+      }
+  
+      .flip {
+        transform: rotateY(180deg);
+      }
+  
+      .logbutt,
+      .regbutt {
+        width: 100%;
+        border-radius: 50px;
+        padding: 9px 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(91, 91, 168);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .regbutt:hover {
+        background-color: rgb(64, 64, 184);
+      }
+      .logbutt:hover {
+        // background-color: rgb(91, 91, 168);
+        background-color: rgb(64, 64, 184);
+      }
+  
+      // img {
+      //   width: 100%;
+      //   height: 100vh;
+      // }
+    }
+  
+    .loginCol {
+      background-color: rgb(223, 209, 209);
+      // height: 100vh;
+  
+      label {
+        display: block;
+        color: rgb(100, 89, 89);
+      }
+      input {
+        border-radius: 50px;
+        border: 1px solid rgb(90, 85, 85);
+        width: 100%;
+        padding: 7px 0;
+        border-color: rgb(238, 228, 228);
+        background-color: rgb(238, 228, 228);
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .register div,
+      .login div {
+        margin-bottom: 20px;
+      }
+  
+      input[type="email"],
+      input[type="password"],
+      input[type="text"],
+      button:focus {
+        outline: none;
+      }
+  
+      input[type="email"]:focus {
+        border: 2px solid rgb(118, 132, 148);
+      }
+      input[type="password"]:focus {
+        border: 2px solid rgb(118, 132, 148);
+      }
+      input[type="text"]:focus {
+        border: 2px solid rgb(118, 132, 148);
+      }
+  
+      .contentRow {
+        display: grid;
+        grid-template-columns: 60%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15%;
+  
+        .regGrp {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .loginRow {
+      grid-template-columns: 42% 1fr;
+    }
+    .contentRow {
+      grid-template-columns: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .loginRow {
+      grid-template-columns: 40% 1fr;
+    }
+    .contentRow {
+      grid-template-columns: 40%;
+    }
+  }
+  
+  @media only screen and (max-width: 630px) {
+    .loginRow {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      height: max-content;
+  
+      .contentRow {
+        grid-template-columns: 1fr;
+  
+        .orclass{
+          display: none;
+        }
+      }
+    }
+  }

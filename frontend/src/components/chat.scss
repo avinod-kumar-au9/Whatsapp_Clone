@@ -1,0 +1,134 @@
+.chat {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  .chatHeaderRow {
+    display: grid;
+    grid-template-columns: 8% 1fr 25%;
+    align-items: center;
+    background-color: #ededed;
+    height: 60px;
+
+    .icongrp {
+      * {
+        float: right;
+
+        margin: 0 1px;
+      }
+      .logout {
+        padding: 10px;
+      }
+    }
+  }
+
+  .chat_contentRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+    row-gap: 20px;
+    
+    overflow-y: auto;
+    height: 490px;
+    
+    background-image: url("https://cdn.hipwallpaper.com/i/32/21/RAh3ga.jpg");
+
+    .chat_contentCol {
+      margin: 0px 80px;
+      height: max-content;
+    }
+    .receivergrp {
+      .receiverdiv {
+        width: 45%;
+
+        .receivermessage {
+          float: left;
+
+          background-color: white;
+          padding: 0px 5px;
+          border-bottom-left-radius: 15px;
+
+          .element1 {
+            color: blue;
+            margin-bottom: 1px;
+          }
+
+          .element2 {
+            padding-left: 20px;
+            margin-top: 0;
+          }
+          * {
+            display: block;
+            float: none;
+            // border: 1px solid black;
+          }
+        }
+      }
+    }
+    .sendergrp {
+      .senderdiv {
+        float: right;
+        width: 45%;
+        .sendermessage {
+          // border: 1px solid red;
+          float: right;
+          text-align: start;
+          padding: 0px 5px;
+          border-bottom-right-radius: 20px;
+          background-color: #dcf8c6;
+          .element0 {
+            color: orangered;
+            margin-bottom: 1px;
+          }
+
+          .element2 {
+            padding-left: 20px;
+            margin-top: 0;
+          }
+
+          * {
+            display: block;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+
+  .chatFooterRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+
+    .sendinput {
+      padding: 15px;
+      border-radius: 50px;
+      width: 70%;
+      border: none;
+    }
+    .sendinput:focus {
+      outline: none;
+    }
+    .sendbutton {
+      padding: 7px 15px;
+      border: 1px solid rgb(165, 121, 121);
+      border-radius: 30px;
+      font-size: medium;
+      cursor: pointer;
+    }
+    .sendbutton:focus {
+      outline: none;
+    }
+    .mic {
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+padding: 0;
+}
+
+.homeRow{
+    display:grid;
+    grid-template-columns: 30% 1fr;
+    
+
+}
